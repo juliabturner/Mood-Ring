@@ -1,0 +1,51 @@
+.content {
+  display: flex;
+  justify-content: stretch;
+}
+
+#calendar {
+  flex: 1;
+}
+
+.column {
+  flex: 1;
+}
+
+.column.left {
+  margin-right: 100px;
+}
+
+.column.left > * {
+  margin-bottom: 0 !important;
+}
+
+.calendar {
+  width: 100%;
+}
+
+body {
+  height: 100vh;
+}
+
+.column.right {
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.column.right .card {
+  background: white;
+  border-radius: 7px;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.1);
+  margin: 12px;
+  padding: 12px;
+  font-family: Montserrat;
+}
+
+.column.right .card p {
+  font-size: 12pt;
+}
+
+.column.right .card h5 {
+  font-size: 16pt;
+  font-weight: bold;
+}

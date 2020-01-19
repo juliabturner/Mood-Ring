@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Calendar - Mood Ring</title>
+    <link href="/index.css" rel="stylesheet" type="text/css" />
+    <link href="/calendar/index.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat|Raleway:400,700|Roboto:400,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo">
+        <a href="/"><img src="/assets/logo.png" width="90px"/></a>
+      </div>
+      <div class="log-in">
+        <p>
+          <a href="/login/">Log In</a>
+          |
+          <a href="/register/">Sign Up</a>
+        </p>
+      </div>
+    </div>
+    <div class="navigation-bar">
+      <a href="/">HOME</a>
+      <a href="...">ABOUT US</a>
+      <a href="/calendar/">PRESCRIPTIONS</a>
+      <a href="...">REVIEWS</a>
+    </div>
+    <div class="content" id="app" style="visibility: hidden">
+      <div class="column left">
+        <v-calendar
+          class="calendar"
+          @dayclick="setLogsByDay"
+          :max-date="new Date()"
+          is-expanded
+        />
+      </div>
+      <div class="column right">
+        <div v-for="(log, index) in logs" class="card">
+          <h2>{{ date }}</h2>
+          <h5>Did you take your medication?</h5>
+          <p>{{ log.medication ? "Yes, I did." : "No, I didn't."}}</p>
+          <p></p>
+          <h5>Do you have symptoms?</h5>
+          <p>{{ log.has_symptoms ? "Yes, I did." : "No, I didn't."}}</p>
+          <h5>Types of symptoms:</h5>
+          <p v-if="log.symptoms">{{ log.symptoms }}</p>
+          <h5>Mood:</h5>
+          <p>{{ mood(index) }}</p>
+          <h5>Notes:</h5>
+          <p>{{ log.note }}</p>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script src="https://unpkg.com/v-calendar@1.0.1"></script>
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          date: null,
+          logs: []
+        },
+        mounted: function() {
+          document.getElementById("app").style = "";
+        },
+        methods: {
+          mood: function(index) {
+            var log = this.logs[index];
+            switch (log.mood) {
+              case 1:
+                return "Terrible";
+              case 2:
+                return "Pretty bad";
+              case 3:
+                return "Mediocre";
+              case 4:
+                return "Pleasant";
+              case 5:
+                return "Amazing!!!!!";
+            }
+          }
+        }
+      });
+
+      var logsByDate = {
+        "2020-01-01": [
+          {
+            medication: true,
+            has_symptoms: true,
+            symptoms: "Dry-mouth",
+            mood: 2,
+            note: "Lost my medication today"
+          }
+        ],
+        "2020-01-02": [
+          {
+            medication: false,
+            has_symptoms: false,
+            symptoms: null,
+            mood: 2,
+            note: "Saw therapist"
+          }
+        ],
+        "2020-01-03": [
+          {
+            medication: true,
+            has_symptoms: false,
+            symptoms: null,
+            mood: 4,
+            note: "Felt really bad"
+          }
+        ],
+        "2020-01-04": [
+          {
+            medication: false,
+            has_symptoms: true,
+            symptoms: "Irritable",
+            mood: 2,
+            note: "I'm tired"
+          }
+        ],
+        "2020-01-05": [
+          {
+            medication: true,
+            has_symptoms: false,
+            symptoms: null,
+            mood: 2,
+            note: "I'm so sad"
+          }
+        ],
+        "2020-01-06": [
+          {
+            medication: false,
+            has_symptoms: true,
+            symptoms: "tired",
+            mood: 3,
+            note: "I'm learning Spanish"
+          }
+        ],
+        "2020-01-07": [
+          {
+            medication: true,
+            has_symptoms: false,
+            symptoms: null,
+            mood: 4,
+            note: "Medication is okay"
+          }
+        ],
+        "2020-01-08": [
+          {
+            medication: true,
+            has_symptoms: false,
+            symptoms: null,
+            mood: 5,
+            note: "Today was my birthday"
+          }
+        ],
+        "2020-01-09": [
+          {
+            medication: false,
+            has_symptoms: false,
+            symptoms: null,
+            mood: 5,
+            note: "Today was so great, I am tired of it"
+          }
+        ],
+        "2020-01-10": [
+          {
+            medication: true,
+            has_symptoms: true,
+            symptoms: "Fatigue",
+            mood: 4,
+            note: "D"
+          }
+        ],
+        "2020-01-11": [
+          {
+            medication: false,
+            has_symptoms: false,
+            symptoms: null,
+            mood: 2,
+            note: "lost my medication today"
+          }
+        ],
+        "2020-01-12": [
+          {
+            medication: false,
+            has_symptoms: true,
+            symptoms: "Fatigue",
+            mood: 4,
+            note: "Took a shower"
+          }
+        ],
+        "2020-01-13": [
+          {
+            medication: false,
+            has_symptoms: true,
+            symptoms: "Hopelessness",
+            mood: 2,
+            note: "Want to stop taking it"
+          }
+        ],
+        "2020-01-14": [
+          {
+            medication: true,
+            has_symptoms: false,
+            symptoms: null,
+            mood: 4,
+            note: "Saw my parents today"
+          }
+        ],
+        "2020-01-15": [
+          {
+            medication: false,
+            has_symptoms: false,
+            symptoms: "Hopelessness",
+            mood: 2,
+            note: "Met up with my friends"
+          }
+        ],
+        "2020-01-16": [
+          {
+            medication: false,
+            has_symptoms: false,
+            symptoms: "Tired",
+            mood: 4,
+            note: "Started my first day of work"
+          }
+        ],
+        "2020-01-17": [
+          {
+            medication: true,
+            has_symptoms: true,
+            symptoms: "Dizzy",
+            mood: 2,
+            note: "My tummy hurts"
+          }
+        ],
+        "2020-01-18": [
+          {
+            medication: true,
+            has_symptoms: true,
+            symptoms: "Naueous",
+            mood: 4,
+            note: "Pretty good day"
+          }
+        ],
+        "2020-01-19": [
+          {
+            medication: false,
+            has_symptoms: false,
+            symptoms: null,
+            mood: 2,
+            note: "lost my medication today"
+          }
+        ]
+      };
+
+      function setLogsByDay(day) {
+        app.date = day.id;
+        app.logs = logsByDate[day.id];
+        if (app.logs == undefined) {
+          app.logs = [];
+        }
+      }
+    </script>
+  </body>
+</html>

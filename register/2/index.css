@@ -1,0 +1,144 @@
+/* prettier-ignore */
+body, p, h1, h2, h3, h4, h5, h6 {
+  margin: 0px;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  padding: 0 25px;
+}
+
+.header .logo {
+  flex: 1;
+}
+
+a {
+  text-decoration: none;
+}
+/* 
+.header .log-in {
+  flex: 5;
+  background: grey;
+} */
+
+.header p,
+.header a {
+  font-size: 15pt;
+  font-family: Roboto;
+  color: #8d779d;
+}
+
+.navigation-bar {
+  background: #6c63ff;
+  padding: 10px 40px;
+}
+
+.navigation-bar a {
+  color: #c1c4dd;
+  font-family: Montserrat;
+  font-size: 12pt;
+  margin-right: 20px;
+}
+
+.content {
+  flex: 1;
+  background: #cebeef;
+  color: #5d4583;
+  display: flex;
+  justify-content: center;
+}
+
+.content .column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/*.content .column.left, .content .column.right {
+  box-sizing: border-box;
+  width: 500px;
+  text-align: center;
+  padding: 40px;
+} */
+
+.content .column.centre {
+  flex: 1;
+}
+
+.content .column.left > * {
+  font-family: Raleway;
+  font-weight: 400;
+  margin-bottom: 22px;
+  padding: 10px;
+}
+
+.content .column.centre > * {
+  font-family: Raleway;
+  font-weight: 400;
+  margin-bottom: 22px;
+}
+
+.content .column.right > * {
+  font-family: Raleway;
+  font-weight: 400;
+  margin-bottom: 22px;
+  padding: 10px;
+}
+
+.button.register {
+  border-radius: 2000000000px;
+  padding: 10px 20px;
+  background: purple;
+  color: white;
+
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 16pt;
+
+  transition: all ease-in-out 150ms;
+}
+
+.button.register:hover {
+  background: rgba(128, 0, 128, 0.63);
+}
+
+.row input {
+  margin: 10px 0 34px 0;
+  border-radius: 6px;
+  border: 5px #5d4583;
+  display: block;
+  width: 300px;
+  padding: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  font: Montserrat;
+}
+
+.dots {
+  display: flex;
+}
+
+.circle {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  font-size: 20pt;
+  color: #fff;
+  /* line-height: 500px; */
+  text-align: center;
+  background: #6c63ff;
+  margin: 0 8px;
+}
+
+.circle.transparent {
+  background: rgba(107, 99, 255, 0.25);
+}

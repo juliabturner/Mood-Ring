@@ -1,0 +1,122 @@
+/* prettier-ignore */
+body, p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: #cebeef;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  padding: 0 25px;
+  background: white;
+}
+
+.header .logo {
+  flex: 1;
+}
+
+.header .logo img {
+  animation: spin 1s infinite linear;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header p,
+.header a {
+  font-size: 15pt;
+  font-family: Roboto;
+  color: #8d779d;
+}
+
+.navigation-bar {
+  background: #6c63ff;
+  padding: 10px 40px;
+}
+
+.navigation-bar a {
+  color: #c1c4dd;
+  font-family: Montserrat;
+  font-size: 12pt;
+  margin-right: 20px;
+}
+
+.content {
+  display: flex;
+}
+
+.login {
+  font: Montserrat;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 32px;
+}
+
+.login .title {
+  color: #5d4583;
+  font-family: Montserrat;
+  font-size: 40pt;
+  font-stretch: normal;
+  font-weight: 300;
+  padding: 50px 0;
+}
+
+.login .fields {
+  color: #5d4583;
+  font-family: Montserrat;
+  font-size: 16pt;
+  font-stretch: normal;
+  font-weight: 300;
+  /* padding: 10px 100px */
+}
+
+.login .button {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  border-radius: 2000000000px;
+  padding: 12px 24px;
+  background: #5d4583;
+  color: white;
+
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 12pt;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all ease-in-out 150ms;
+}
+
+.login .button:hover {
+  background: rgba(128, 0, 128, 0.63);
+}
+
+.login input {
+  margin: 10px 0 34px 0;
+  border-radius: 6px;
+  border: 5px #5d4583;
+  display: block;
+  width: 300px;
+  padding: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  font: Montserrat;
+}
+
+.content .yoga {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 450px;
+  height: 450px;
+}

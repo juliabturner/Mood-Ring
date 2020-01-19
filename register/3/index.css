@@ -25,11 +25,6 @@ body {
 a {
   text-decoration: none;
 }
-/* 
-.header .log-in {
-  flex: 5;
-  background: grey;
-} */
 
 .header p,
 .header a {
@@ -63,17 +58,6 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-/*.content .column.left, .content .column.right {
-  box-sizing: border-box;
-  width: 500px;
-  text-align: center;
-  padding: 40px;
-} */
-
-.content .column.centre {
-  flex: 1;
 }
 
 .content .column.left > * {

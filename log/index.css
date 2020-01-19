@@ -1,0 +1,230 @@
+/* prettier-ignore */
+body, p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: #cebeef;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.header {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  padding: 0 25px;
+  background: white;
+}
+
+.header .logo {
+  flex: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header p,
+.header a {
+  font-size: 15pt;
+  font-family: Roboto;
+  color: #8d779d;
+}
+
+.navigation-bar {
+  background: #6c63ff;
+  padding: 10px 40px;
+}
+
+.navigation-bar a {
+  color: #c1c4dd;
+  font-family: Montserrat;
+  font-size: 12pt;
+  margin-right: 20px;
+}
+
+.logData {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.logData .question {
+  color: #5d4583;
+  font-family: Montserrat;
+  font-size: 15pt;
+  font-stretch: normal;
+  font-weight: 300;
+  padding: 20px 10px;
+}
+
+.logData .checks {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+
+.logData .checkOne {
+  color: #5d4583;
+  font-family: Montserrat;
+  font-size: 15pt;
+  font-stretch: normal;
+  font-weight: 300;
+  padding: 8px 30px;
+}
+.logData .checkTwo {
+  color: #5d4583;
+  font-family: Montserrat;
+  font-size: 15pt;
+  font-stretch: normal;
+  font-weight: 300;
+  padding: 8px 30px;
+}
+
+.logData .symptoms {
+  color: #5d4583;
+  font-family: Montserrat;
+  font-size: 15pt;
+  font-stretch: normal;
+  font-weight: 300;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logData .options {
+  font-size: 10pt;
+  padding: 10px 10px;
+}
+
+.logData.options .special {
+  padding: 10px 5px;
+}
+
+.logData .mood {
+  color: #5d4583;
+  font-family: Montserrat;
+  font-size: 15pt;
+  font-stretch: normal;
+  font-weight: 300;
+  padding: 20px 10px;
+}
+
+.logData .words {
+  color: #5d4583;
+  font-family: Montserrat;
+  font-style: bold;
+  font-size: 10pt;
+  font-stretch: normal;
+}
+
+.logData .ringhead {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+
+.logData .ringhead .ring1 {
+  filter: invert(10%) sepia(83%) saturate(6663%) hue-rotate(16deg)
+    brightness(95%) contrast(119%);
+}
+
+.logData .ringhead .ring2 {
+  filter: invert(65%) sepia(25%) saturate(3723%) hue-rotate(350deg)
+    brightness(97%) contrast(90%);
+}
+.logData .ringhead .ring3 {
+  filter: invert(77%) sepia(62%) saturate(364%) hue-rotate(345deg)
+    brightness(97%) contrast(90%);
+}
+.logData .ringhead .ring4 {
+  filter: invert(88%) sepia(52%) saturate(498%) hue-rotate(2deg) brightness(92%)
+    contrast(103%);
+}
+.logData .ringhead .ring5 {
+  filter: invert(67%) sepia(74%) saturate(368%) hue-rotate(69deg)
+    brightness(92%) contrast(87%);
+}
+.logData .boxes {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  padding: 0px 480px;
+}
+
+.logData .boxes .box1 {
+  padding: 0px 10px;
+}
+.logData .boxes .box2 {
+  padding: 0px 58px;
+}
+.logData .boxes .box3 {
+  padding: 0px 10px;
+}
+.logData .boxes .box4 {
+  padding: 0px 62px;
+}
+.logData .boxes .box5 {
+  padding: 0px 10px;
+}
+.logData .happy {
+  color: #5d4583;
+  font-family: Montserrat;
+  font-size: 15pt;
+  font-stretch: normal;
+  font-weight: 300;
+  box-sizing: border-box;
+  padding: 10px 10px;
+  margin-top: 30px;
+}
+
+.happy input {
+  margin: 10px 0 20px 0;
+  border-radius: 6px;
+  border: 5px #5d4583;
+
+  width: 150px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.3);
+  font: Montserrat;
+}
+.submit .button {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  border-radius: 2000000000px;
+  padding: 5px 24px;
+  background: #5d4583;
+  color: white;
+
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 12pt;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all ease-in-out 150ms;
+}
+
+.submit .button:hover {
+  background: rgba(128, 0, 128, 0.63);
+}
+
+.submit input {
+  margin: 5px 0 34px 0;
+  border-radius: 6px;
+  border: 5px #5d4583;
+  width: 150px;
+  background: rgba(255, 255, 255, 0.3);
+  font: Montserrat;
+}

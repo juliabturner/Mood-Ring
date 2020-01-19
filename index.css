@@ -21,6 +21,16 @@ body {
   flex: 1;
 }
 
+/* prettier-ignore */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.header .logo img:hover {
+  animation: spin 1s infinite linear;
+}
+
 a {
   text-decoration: none;
 }
